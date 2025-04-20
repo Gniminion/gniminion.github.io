@@ -95,12 +95,12 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
         </div>
 
         <div className={`flex items-center ${open ? "space-x-4" : "flex-col space-y-4"} transition-all duration-300`}>
-          <a href="https://www.linkedin.com/in/mu-mingming-zhang/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/mu-mingming-zhang/" target="_blank">
             <button className="text-white hover:text-primary transition cursor-pointer">
               <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
             </button>
           </a>
-          <a href="https://github.com/Gniminion" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Gniminion" target="_blank">
             <button className="text-white hover:text-primary transition cursor-pointer">
               <FontAwesomeIcon icon={faGithub} className="text-2xl" />
             </button>

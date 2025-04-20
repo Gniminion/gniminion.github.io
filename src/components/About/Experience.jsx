@@ -65,7 +65,8 @@ function Experience() {
         </button>
       </div>
 
-      <div className="mt-4 border-2 border-dark3 bg-dark rounded-lg p-4 overflow-y-auto transition-all max-h-[400px]">
+      <div key={activeTab}
+           className="mt-4 border-2 border-dark3 bg-dark rounded-lg p-4 overflow-y-auto transition-all duration-300 max-h-[400px] opacity-100 fade-in">
         {activeTab === "Experience"
           ? experiences.map((exp, index) => (
               <div key={index} className="mb-6 last:mb-0">

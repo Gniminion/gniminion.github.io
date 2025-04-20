@@ -1,11 +1,11 @@
 import Skill from "./Skill";
-import Experience from "./Experience";  
+import Experience from "./Experience"; 
 
 function About() {
   return (
     <div className="flex-1 overflow-auto">
       <div className="mt-4 text-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-start">
 
           <div className="flex flex-col gap-6 w-full">
             <div className="flex flex-col w-full bg-dark2 rounded-lg overflow-hidden border-2 border-dark3">
@@ -21,12 +21,12 @@ function About() {
                 <span className="text-primary"> intuitive visualisations for technical concepts. </span> 
               </p>
               <div>
-                <p className="text-gray">When I'm not designing or coding, you can also find me editing videos and translating!</p>
+                <p className="text-gray">People call me MingMing, and a lot of my interests relate to nerdy media. When I'm not designing or coding, you can also find me editing videos and translating!</p>
               </div>
             </div>
           </div>
 
-          <div className="bg-dark2 rounded-lg overflow-hidden">
+          <div className="flex flex-col w-full h-full min-h-0 bg-dark2 rounded-lg overflow-hidden">
             <Experience />
           </div>
         </div>

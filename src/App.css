@@ -12,3 +12,13 @@ html, body {
   padding: 0;
   overflow: hidden;
 }
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

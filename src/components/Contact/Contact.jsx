@@ -61,7 +61,7 @@ function Contact() {
             required
             className="text-sm p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none mb-4"
             placeholder="Your Message"
-            rows="6"
+            rows="10"
           ></textarea>
 
           <div className="flex flex-col items-center">

@@ -7,12 +7,12 @@ import { faDatabase, faPenNib } from "@fortawesome/free-solid-svg-icons";
 function Skill() {
   const skills = [
     { logo: faGitAlt, name: "Git", description: "Version control" },
-    { logo: faRProject, name: "R", description: "Statistical analysis" },
-    { logo: faDatabase, name: "SQL", description: "Database queries" },
+    { logo: faRProject, name: "R", description: "Data analysis" },
+    { logo: faDatabase, name: "SQL", description: "Data analysis" },
     { logo: faPython, name: "Pandas | Python", description: "Data analysis" },
     { logo: faReact, name: "React | JS", description: "Web development" },
     { logo: faCss3Alt, name: "Tailwind | CSS", description: "Web development" },
-    { logo: faFigma, name: "Figma", description: "UI mockups" },
+    { logo: faFigma, name: "Figma", description: "UI design" },
     { logo: faPenNib, name: "Adobe Suite", description: "Graphic design" },
   ];
 

@@ -1,9 +1,12 @@
 import { useState } from "react";
 import ProjCard from "./ProjCard";
+import Papers from "./Papers";
 import { motion } from "framer-motion";
+
 
 function Projects() {
   const [activeCat, setactiveCat] = useState("All");
+  
 
   const projects = [
     { title: "Tech Investments Analysis", category: ["Data", "Development"], image: "cxc.png", 
@@ -60,7 +63,7 @@ function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
         {filtered.map((project, index) => (
           <motion.a layout
-            href={project.link} 
+            href={project.link} target="_blank"
             key={`${project.title}-${activeCat}`} 
             initial="hidden"
             animate="visible"
@@ -75,6 +78,9 @@ function Projects() {
           </motion.a>
         ))}
       </div>
+      
+      <Papers/>
+
     </section>
   );
 }
