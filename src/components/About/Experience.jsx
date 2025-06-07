@@ -8,7 +8,7 @@ function Experience() {
       logo: "mikomiko.png",
       institution: "Mikomiko SG | 2025",
       role: "UX/UI Designer and Product Management",
-      description: "Providing intuitive user interfaces for a AI tool platform.",
+      description: "Providing intuitive user interfaces for a AI tool platform. Involved in frontend development of product websites.",
     },
     {
       logo: "waterloo.png",
@@ -40,10 +40,10 @@ function Experience() {
   ];
 
   return (
-    <div className="mx-auto p-4 md:p-6 bg-dark2 text-white rounded-lg">
+    <div className="mx-auto p-4 lg:p-6 bg-dark2 text-white rounded-lg">
       <div className="flex rounded-lg">
         <button
-          className={`hover:cursor-pointer border-2 border-dark3 flex-1 px-2 py-2 rounded-l-lg transition-all duration-300 ${
+          className={`hover:cursor-pointer border border-dark3 flex-1 px-2 py-2 rounded-l-lg transition-all ease-in-out duration-500 ${
             activeTab === "Experience"
               ? "bg-dark3 text-white font-semibold"
               : "bg-dark text-gray"
@@ -54,7 +54,7 @@ function Experience() {
         </button>
 
         <button
-          className={`hover:cursor-pointer border-2 border-dark3 flex-1 px-2 py-2 rounded-r-lg transition-all duration-300 ${
+          className={`hover:cursor-pointer border border-dark3 flex-1 px-2 py-2 rounded-r-lg transition-all ease-in-out duration-500 ${
             activeTab === "Education"
               ? "bg-dark3 text-white font-semibold"
               : "bg-dark text-gray"
@@ -66,7 +66,7 @@ function Experience() {
       </div>
 
       <div key={activeTab}
-           className="mt-4 border-2 border-dark3 bg-dark rounded-lg p-4 overflow-y-auto transition-all duration-300 max-h-[400px] opacity-100 fade-in">
+           className="mt-4 border border-dark3 bg-dark rounded-lg p-4 overflow-y-auto transition-all fade-in opacity-200 duration-500 max-h-[400px] ">
         {activeTab === "Experience"
           ? experiences.map((exp, index) => (
               <div key={index} className="mb-6 last:mb-0">

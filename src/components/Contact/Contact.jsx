@@ -27,7 +27,7 @@ function Contact() {
 
   return (
     <div className="mt-4 text-white">
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
         <div className="lg:col-span-3 bg-dark2 rounded-lg h-[282px] lg:h-[564px]"> 
           <Map/> 
         </div>
@@ -42,7 +42,7 @@ function Contact() {
             type="text"
             name="user_name"
             required
-            className="text-sm p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none mb-4"
+            className="text-sm p-2 rounded-md border border-dark3 bg-dark text-gray focus:outline-none mb-4"
             placeholder="Your Name"
           />
 
@@ -51,7 +51,7 @@ function Contact() {
             type="email"
             name="user_email"
             required
-            className="text-sm p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none mb-4"
+            className="text-sm p-2 rounded-md border border-dark3 bg-dark text-gray focus:outline-none mb-4"
             placeholder="Your Email"
           />
 
@@ -59,7 +59,7 @@ function Contact() {
           <textarea
             name="message"
             required
-            className="text-sm p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none mb-4"
+            className="text-sm p-2 rounded-md border border-dark3 bg-dark text-gray focus:outline-none mb-4"
             placeholder="Your Message"
             rows="10"
           ></textarea>

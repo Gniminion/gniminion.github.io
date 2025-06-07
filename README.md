@@ -1,5 +1,26 @@
-# Personal Website
+# Personal Portfolio Website
 
-A responsive portfolio website built with React and Tailwind showcasing experience, skills, and projects, complete with a Leaflet map with location info and EmailJS contact form.
+A modern, responsive portfolio website built with React and Vite.
 
-This is a work in progress, but feel free to reference it as a template.
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Stack
+
+- React
+- Vite
+- Tailwind CSS
+
+## License
+
+MIT License - This is a work in progress, but feel free to reference it as a template. Can use this code for your own portfolio!

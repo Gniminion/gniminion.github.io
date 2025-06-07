@@ -50,7 +50,7 @@ function Skill() {
           <motion.div 
             key={index} 
             variants={item}
-            className="border-2 border-dark3 flex text-left items-center bg-dark text-white p-4 rounded-md w-full overflow-hidden"
+            className="border border-dark3 flex text-left items-center bg-dark text-white p-4 rounded-md w-full overflow-hidden"
           >
             <FontAwesomeIcon icon={skill.logo} size="2x" className="mr-4 text-primary" />
             <div>

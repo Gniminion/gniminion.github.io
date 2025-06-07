@@ -2,85 +2,119 @@ import { useState } from "react";
 import ProjCard from "./ProjCard";
 import Papers from "./Papers";
 import { motion } from "framer-motion";
+import { PROJECTS } from "../../data/projects";
+import { CATEGORIES } from "../../data/projects";
 
+export const getProjectBySlug = (slug) => {
+  return PROJECTS.find(project => {
+    const projectSlug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    return projectSlug === slug;
+  });
+};
+
+const CARD_ANIMATION = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring" }
+  }
+};
 
 function Projects() {
-  const [activeCat, setactiveCat] = useState("All");
-  
+  const [activeCategory, setActiveCategory] = useState("All");
 
-  const projects = [
-    { title: "Tech Investments Analysis", category: ["Data", "Development"], image: "cxc.png", 
-      desc: "Building a predictive model and dashboard to advise investors in Canada's tech industry",
-      link: "https://github.com/Gniminion/tech-investment-analysis" },
-    { title: "Learn More Video Series", category: "Design", image: "learnmore.png",
-      desc: "Storyboarding, designing, and editing fun animated videos for students to learn effectively",
-      link: "https://www.youtube.com/@LearnMoreWithDanWolczuk/videos" },
-    { title: "Conference Tracker", category: ["Data", "Development"], image: "contrack.png",
-      desc: "A tool for front desk workers to efficiently manage attendee information and check in process",
-      link: "https://github.com/Gniminion/conference-tracker" },
-    { title: "This Portfolio Site", category: ["Design", "Development"], image: "prototype.png",
-      desc: "A simple, intuitive portfolio template to showcase personal works",
-      link: "https://github.com/Gniminion/portfolio" },
-  ];
-
-  const card = {
-    hidden: { opacity: 0, y: 24 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { type: "spring" }
+  const getFilteredProjects = () => {
+    if (activeCategory === "All") {
+      return PROJECTS;
     }
+    
+    return PROJECTS.filter(project => 
+      Array.isArray(project.category) 
+        ? project.category.includes(activeCategory)
+        : project.category === activeCategory
+    );
   };
 
-  const categories = ["All", "Data", "Design", "Development"];
+  const separateProjectsByPriority = (projects) => {
+    const priorityProjects = projects.filter(project => project.priority);
+    const standardProjects = projects.filter(project => !project.priority);
+    
+    return { priorityProjects, standardProjects };
+  };
 
-  const filtered = activeCat === "All"
-    ? projects
-    : projects.filter(project => 
-        Array.isArray(project.category) 
-          ? project.category.includes(activeCat)
-          : project.category === activeCat
-      );
+  const renderCategoryButtons = () => (
+    <div className="flex space-x-4 mb-6 overflow-x-auto pb-2 hide-scrollbar">
+      {CATEGORIES.map(category => (
+        <button
+          key={category}
+          onClick={() => setActiveCategory(category)}
+          className={`px-3 py-2 rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0 bg-dark2 ${
+            activeCategory === category 
+              ? "border border-primary text-white" 
+              : "border border-dark3 text-gray hover:cursor-pointer"
+          }`}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+  );
+
+  const renderProjectCard = (project) => (
+    <motion.a
+      layout
+      href={project.link} 
+      target="_blank"
+      rel="noopener noreferrer"
+      key={`${project.title}-${activeCategory}`} 
+      initial="hidden"
+      animate="visible"
+      variants={CARD_ANIMATION}
+      className="block transition-all duration-300 ease-in-out hover:scale-[1.02]"
+    >
+      <ProjCard 
+        title={project.title} 
+        image={project.image} 
+        desc={project.desc}
+        tags={project.tags}
+        priority={project.priority}
+      />
+    </motion.a>
+  );
+
+  const renderPriorityProjects = (projects) => {
+    if (projects.length === 0) return null;
+
+    return (
+      <div className="grid grid-cols-1 gap-6 w-full mb-6">
+        {projects.map((project, index) => renderProjectCard(project, index))}
+      </div>
+    );
+  };
+
+  const renderStandardProjects = (projects) => {
+    if (projects.length === 0) return null;
+
+    return (
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
+        {projects.map((project, index) => renderProjectCard(project, index))}
+      </div>
+    );
+  };
+
+  const filteredProjects = getFilteredProjects();
+  const { priorityProjects, standardProjects } = separateProjectsByPriority(filteredProjects);
 
   return (
     <section className="text-white text-sm flex flex-col w-full">
-      <div className="flex space-x-4 mb-6 overflow-x-auto pb-2 hide-scrollbar">
-        {categories.map(category => (
-          <button
-            key={category}
-            onClick={() => setactiveCat(category)}
-            className={`px-3 py-2 rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
-              activeCat === category 
-                ? "border-2 border-primary text-white" 
-                : "border-2 border-dark3 text-gray hover:cursor-pointer"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      {renderCategoryButtons()}
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-        {filtered.map((project, index) => (
-          <motion.a layout
-            href={project.link} target="_blank"
-            key={`${project.title}-${activeCat}`} 
-            initial="hidden"
-            animate="visible"
-            variants={card}
-            className="block hover:scale-[1.02]"
-          >
-            <ProjCard 
-              title={project.title} 
-              image={project.image} 
-              desc={project.desc}
-            />
-          </motion.a>
-        ))}
-      </div>
+      {renderPriorityProjects(priorityProjects)}
+      
+      {renderStandardProjects(standardProjects)}
       
       <Papers/>
-
     </section>
   );
 }
