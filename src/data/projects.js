@@ -10,8 +10,25 @@ export const PROJECTS = [
     link: "https://github.com/Gniminion/tech-investment-analysis",
     tags: ["Python", "Pandas", "Scikit-learn", "Dash", "Git", "Machine Learning", "Data Visualization"],
     fullDescription: {
+      role: ` Data Scientist
+      Frontend Developer
+      Machine Learning Analyst`,
+    
+      duration: `2 Weeks
+      Mar - Apr 2025`,
+
+      deliverables:`Data Visualisation Dashboard
+      Insights Report and Slides
+      Aggregated Dataset
+      Source Code
+      `,
+    
+      team: `4 Members
+      For CxC 2025 Hackathon
+      RunQL Challenge`,
+    
       overview: {
-        content: `This hackathon project for CxC 2025 aims to help investors make data-driven decisions in Canada's rapidly evolving tech sector. By analyzing historical investment data and market trends provided by RunQL, our team developed a predictive model and interactive dashboard for investment insights.`,
+        content: `This hackathon project for [CxC 2025](https://devpost.com/software/runql-canadian-tech-investment-analysis?ref_content=my-projects-tab&ref_feature=my_projects) aims to help investors make data-driven decisions in Canada's rapidly evolving tech sector. By analyzing historical investment data and market trends provided by RunQL, our team developed a predictive model and interactive dashboard for investment insights.`,
         images: [
           {
             src: "tidash.png",
@@ -19,7 +36,73 @@ export const PROJECTS = [
           }
         ]
       },
+    
+      problem: {
+        content: `# Pluto
+
+**Pluto** (minor-planet designation: *134340 Pluto*)
+is a
+[dwarf planet](https://en.wikipedia.org/wiki/Dwarf_planet)
+in the
+[Kuiper belt](https://en.wikipedia.org/wiki/Kuiper_belt).
+
+## History
+
+In the 1840s,
+[Urbain Le Verrier](https://wikipedia.org/wiki/Urbain_Le_Verrier)
+used Newtonian mechanics to predict the position of the
+then-undiscovered planet
+[Neptune](https://wikipedia.org/wiki/Neptune)
+after analyzing perturbations in the orbit of
+[Uranus](https://wikipedia.org/wiki/Uranus).
+
+***
+
+Just a link: www.nasa.gov.
+
+* Lists
+* [ ] todo
+* [x] done
+
+A table:
+
+| a | b |
+| - | - |
+
+<details><summary>Show example</summary>
+
+</details>
+
+      `
+      },      
+    
+      development: {
+        content: `We tackled the challenge by transforming messy investment datasets into actionable insights.
+
+The interface allows users to filter by category (e.g., FinTech, AI), location (e.g., Toronto, Vancouver), and funding round to explore trends interactively.`,
+        
+        images: [
+          {
+            src: "sector_heatmap.png",
+            caption: "Heatmap of tech investment categories across Canadian regions"
+          },
+          {
+            src: "model-output.png",
+            caption: "Predictive model outputs showing regions with highest future potential"
+          }
+        ]
+      },
+    
+      outcome: {
+        content: `Our project was recognized at the [CxC 2025 showcase](https://devpost.com/software/runql-canadian-tech-investment-analysis?ref_content=my-projects-tab&ref_feature=my_projects) as a standout example of applied data science for public-good investment analysis.
+      ## Key results:    
+    - Built a reusable pipeline for cleaning and analyzing investment datasets
+    - Delivered a predictive tool and dashboard that can be extended for real-world investor use
+    - Open-sourced the project for future contributors and further development
+We learned how to distill complex data into a usable decision-making product under tight hackathon timelines, combining technical rigor with user-centered design.`
+      }
     }
+    
   },
   { 
     title: "Learn More Video Series", 
@@ -28,50 +111,72 @@ export const PROJECTS = [
     desc: "Storyboarding, designing, and editing fun animated videos for students to learn effectively",
     priority: true,
     link: "https://www.youtube.com/@LearnMoreWithDanWolczuk/videos",
-    tags: ["Photoshop", "Davinci Resolve", "Storyboarding", "Animation"],
+    tags: ["Photoshop", "Premiere Pro", "Davinci Resolve", "Storyboarding", "Animation"],
     fullDescription: {
       overview: "Learn More is an educational video series designed to make complex topics accessible and engaging for students. Through animation and storytelling, we transform challenging concepts into memorable learning experiences.",
       problem: "Traditional educational content often fails to engage students, leading to reduced learning outcomes. There was a need for content that could both educate and entertain while maintaining high educational standards.",
-      exploration: "We researched educational psychology principles and conducted surveys with students and teachers to understand their needs. This led to developing a unique style that balances entertainment with educational value.",
       development: "Each video goes through a comprehensive production pipeline: concept development, storyboarding, animation design in Photoshop, and final editing in Davinci Resolve. We focus on creating visually appealing content that maintains educational integrity.",
-      challenges: "Balancing entertainment with educational value was a constant challenge. We also needed to develop efficient workflows to maintain consistent quality while meeting regular release schedules.",
       outcome: "The channel has grown to over 10,000 subscribers, with teachers regularly incorporating our videos into their curriculum. Student feedback indicates improved understanding and retention of complex topics."
     }
   }, 
   { 
-    title: "Subletting in California ↗", 
+    title: "Subletting in California", 
     category: "Data", 
     image: "sublet.png",
-    desc: "Advising real estate stakeholders on the housing trends in California through exploratory analysis",
+    desc: "Advising real estate stakeholders on the housing trends in California through exploratory analysis.",
     priority: false,
     link: "https://github.com/Gniminion/rchive/blob/main/Datafest%202025/DataFest%202025.pdf",
     tags: ["R", "Data Visualization", "Market Research"]
   },
   { 
-    title: "AI Product Website ↗", 
+    title: "MikoMiko Product Website", 
     category: ["Design", "Development"], 
     image: "mikoai.png",
-    desc: "Designing and developing an info site for an AI platform, increasing traction for product and recruitment",
+    desc: "Developing an info site for an AI platform, increasing traction for product and recruitment.",
     priority: false,
     link: "https://mikomiko.ai",
     tags: ["React", "Tailwind CSS", "Figma", "Next.js", "Git", "SEO"]
   },
   { 
-    title: "Conference Tracker ↗", 
+    title: "Conference Tracker", 
     category: ["Data", "Development"], 
     image: "contrack.png",
-    desc: "A tool for front desk workers to efficiently manage attendee information and check in process",
+    desc: "A tool for front desk workers to efficiently manage attendee information and check in process.",
     priority: false,
     link: "https://github.com/Gniminion/conference-tracker",
-    tags: ["Java", "Swing", "OOP", "Prototyping"]
+    tags: ["Java", "SwingGUI", "OOP", "Prototyping"]
   },
   { 
-    title: "This Portfolio Site ↗", 
-    category: ["Design", "Development"], 
+    title: "Personal Art Portfolio", 
+    category: ["Design"], 
     image: "prototype.png",
-    desc: "A simple, intuitive portfolio template to showcase personal works",
+    desc: "A broad collection of my smaller works, including educational comics and performance photography.",
     priority: false,
-    link: "https://github.com/Gniminion/portfolio",
-    tags: ["React", "Tailwind CSS", "Figma", "Vite", "Git"]
+    link: "https://drive.google.com/file/d/1_bqNCADLANv-hy4M5-cUlOTYx1igkg8y/view?usp=sharing",
+    tags: ["Graphic Design", "Photoshop", "Photography"]
   },
+  // { 
+  //   title: "This Portfolio Site ↗", 
+  //   category: ["Development"], 
+  //   image: "prototype.png",
+  //   desc: "A simple, intuitive portfolio template to showcase personal works",
+  //   priority: false,
+  //   link: "https://github.com/Gniminion/portfolio",
+  //   tags: ["React", "Tailwind CSS", "Vite", "Git"]
+  // },
+];
+
+export const PAPERS = [
+  { title: "Machine Translation in Human Oriented Workplaces", category: "IT",
+    desc: "Machine translation covers the task of preserving the meaning of the input text and producing fluent text in the output language. As machine translation tools become more prevalent in daily life, there are, of course, benefits and drawbacks. This paper attempts to provide a holistic perspective in translation machines and human interaction by interviewing industry professionals.",
+    link: "https://drive.google.com/file/d/1LIBhIGGU2dM3YiRdivpGxKs3GqQOslPe/view?usp=drive_link" },
+  { title: "Evaluating the Iconic Design Behind the Ramune Bottle", category: "Mathematics", 
+    desc: "This mathematical investigation aims to understand the structure and related volume of the Codd neck bottle in the hopes of finding why alterations have been made that takes away from its original authenticity, using applications of integration (volumes of revolution), geometric visualisation, and polynomial interpolations with matricies.",
+    link: "https://drive.google.com/file/d/13-ZeC8RwwzlLL3vGj4JQjwpHCcQwB93d/view?usp=drive_link" },
+  { title: "Investigating Osmolarity in Relation to Mitosis Rate in Meristem Cells", category: "Biology",
+    desc: "A month long project involving collecting both quantitative and qualitative data using laboratory techniques. The results of this paper supports the hypothesis that higher osmolarity limits mitosis and the cell division process in Allium cepa root meristem cells.",
+    link: "https://drive.google.com/file/d/15A94JMMRH8zltPuQeRgWzNTQX3K2LSte/view?usp=drive_link" },
+  { title: "Comparing Shiny Hunting Methods in Generation 5 Pokemon Games",  category: "Mathematics",
+    desc: "A short statstical exploration applying the Poisson distribution on encounter and hatching rates to find a optimal method in aquiring a shiny Axew.",
+    link: "https://drive.google.com/file/d/1laTHjA4geHkGhKSTaHqzkBBX6ZgArRoG/view?usp=drive_link" },  
 ];

@@ -24,19 +24,19 @@ export default function App() {
     <div className="flex h-screen text-white overflow-hidden ">
       <Navbar scrollToSection={scrollToSection} homeRef={homeRef} projectsRef={projectsRef} contactRef={contactRef} />
       
-      <div className="flex-1 overflow-y-auto p-8 lg:p-12 w-full max-w-6xl mx-auto">
+      <div className="flex-1 overflow-y-auto p-8 lg:p-12 w-full max-w-5xl mx-auto">
         <section ref={homeRef} className="-mt-4">
-          <h2 className="text-left text-3xl font-bold">About</h2>
+          <h2 className="text-left text-3xl"> ABOUT <span className="text-primary">MU ZHANG</span> ◂</h2>
           <About/>
         </section>
 
         <section ref={projectsRef} className="mt-8">
-          <h2 className="text-left text-3xl font-bold mb-8">Projects</h2>
+          <h2 className="text-left text-3xl mb-8">  PROJECTS ◂</h2>
           <Project/>
         </section>
 
         <section ref={contactRef} className="mt-8 mb-4">
-          <h2 className="text-left text-3xl font-bold">Contact</h2>
+          <h2 className="text-left text-3xl">CONTACT ◂</h2>
           <Contact/>
         </section>
       </div>

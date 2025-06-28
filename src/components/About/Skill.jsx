@@ -1,20 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPython, faReact, faRProject, faGitAlt, faFigma, faCss3Alt } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase, faPenNib } from "@fortawesome/free-solid-svg-icons";
+import { SKILLS } from "../../data/about";
 
 function Skill() {
-  const skills = [
-    { logo: faGitAlt, name: "Git", description: "Version control" },
-    { logo: faRProject, name: "R", description: "Data analysis" },
-    { logo: faDatabase, name: "SQL", description: "Data analysis" },
-    { logo: faPython, name: "Pandas | Python", description: "Data analysis" },
-    { logo: faReact, name: "React | JS", description: "Web development" },
-    { logo: faCss3Alt, name: "Tailwind | CSS", description: "Web development" },
-    { logo: faFigma, name: "Figma", description: "UI design" },
-    { logo: faPenNib, name: "Adobe Suite", description: "Graphic design" },
-  ];
 
   const container = {
     hidden: { opacity: 0 },
@@ -38,7 +27,7 @@ function Skill() {
 
   return (
     <div className="p-6 overflow-auto">
-      <h2 className="text-left text-xl font-bold text-white mb-4 -mt-2">Skills</h2>
+      <h2 className="text-left text-xl  text-white mb-4">My Stack</h2>
       <motion.div 
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
         variants={container}
@@ -46,7 +35,7 @@ function Skill() {
         whileInView="show"
         viewport={{ once: true, margin: "-100px" }}
       >
-        {skills.map((skill, index) => (
+        {SKILLS.map((skill, index) => (
           <motion.div 
             key={index} 
             variants={item}

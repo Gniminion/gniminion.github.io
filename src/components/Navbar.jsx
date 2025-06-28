@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faHome, faLayerGroup, faPaperPlane, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faLayerGroup, faPaperPlane, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const MOBILE_BREAKPOINT = 600;
 const OBSERVER_THRESHOLD = 0;
@@ -12,7 +12,7 @@ const SOCIAL_LINKS = {
 };
 
 const NAVIGATION_ITEMS = [
-  { id: "home", icon: faHome, label: "Home" },
+  { id: "home", icon: faHome, label: "About" },
   { id: "projects", icon: faLayerGroup, label: "Projects" },
   { id: "contact", icon: faPaperPlane, label: "Contact" }
 ];
@@ -84,7 +84,7 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
 
   const getNavItemClassName = (sectionId) => {
     const baseClasses = "flex items-center gap-3 cursor-pointer transition-all";
-    const activeClasses = activeSection === sectionId ? "text-white font-bold" : "text-gray";
+    const activeClasses = activeSection === sectionId ? "text-white " : "text-gray";
     
     return `${baseClasses} ${activeClasses}`;
   };
@@ -94,7 +94,7 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
 
     return (
       <div className="text-left">
-        <h1 className="text-left text-2xl font-bold mt-2">
+        <h1 className="text-left text-2xl  mt-2">
           Hello! I'm <br />
           <span className="text-primary">Mu Zhang</span>
         </h1>
@@ -136,7 +136,7 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
           className={getNavItemClassName(id)}
         >
           <FontAwesomeIcon icon={icon} className="text-xl" />
-          {isOpen && <span className="text-base">{label}</span>}
+          {isOpen && <h4 className="text-base">{label}</h4>}
         </li>
       ))}
     </ul>
@@ -167,7 +167,7 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
             aria-label={isOpen ? "Close navigation" : "Open navigation"}
           >
             <FontAwesomeIcon
-              icon={isOpen ? faTimes : faBars}
+              icon={faBars}
               className="text-white text-2xl"
             />
           </button>

@@ -28,7 +28,7 @@ function ProjCard({ title, image, desc, tags, priority }) {
 
   return (
     <div 
-      className="flex flex-col h-full bg-dark2 rounded-xl p-4 lg:p-6"
+      className="flex flex-col h-full bg-dark2 border-dark3 rounded-xl p-4"
       onClick={handleClick}
     >
       <div 
@@ -50,14 +50,14 @@ function ProjCard({ title, image, desc, tags, priority }) {
                 hovered ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <span className="text-white text-lg font-semibold">Read More →</span>
+              <h4 className="text-white text-lg font-medium">Read Case Study →</h4>
             </div>
           )}
         </div>
       </div>
       
       <div className="mt-4 text-left flex-1">
-        <h2 className="text-lg md:text-xl text-white font-semibold">{title}</h2>
+        <h2 className="text-lg md:text-xl text-white font-medium">{title}</h2>
         {tags && renderTags()}
         <p className="text-sm md:text-base text-gray mt-2">{desc}</p>
       </div>

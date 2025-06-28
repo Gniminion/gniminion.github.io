@@ -9,11 +9,16 @@ import { PROJECTS } from '../../../data/projects';
 const SECTION_NAMES = {
   overview: "Overview",
   problem: "Problem",
-  exploration: "Exploration",
   development: "Development",
-  challenges: "Challenges",
   outcome: "Outcome"
 };
+
+const SUMMARY_FIELDS = [
+  { label: 'Role', key: 'role' },
+  { label: 'Team', key: 'team' },
+  { label: 'Deliverables', key: 'deliverables' },
+  { label: 'Duration', key: 'duration' },
+];
 
 const createSlug = (title) => {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -30,9 +35,7 @@ function ProjectPage() {
   const sectionRefs = {
     overview: useRef(null),
     problem: useRef(null),
-    exploration: useRef(null),
     development: useRef(null),
-    challenges: useRef(null),
     outcome: useRef(null)
   };
 
@@ -139,6 +142,45 @@ function ProjectPage() {
         {/* Main Content */}
         <main className="flex-1 overflow-y-auto">
           <div className="max-w-5xl mx-auto p-6 lg:p-12">
+
+            {/* Main Project Image */}
+            {project?.image && (
+              <div className="aspect-video mb-12">
+                <img 
+                  src={`/portfolio/projects/${project.image}`}
+                  alt={project.title}
+                  className="w-full h-full object-cover rounded-lg"
+                  loading="lazy"
+                />
+              </div>
+            )}
+
+            {/* Summary Section */}
+            <section className="mb-16" id="summary">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-6 text-sm leading-relaxed">
+                {SUMMARY_FIELDS.map(({ label, key }) => {
+                  const content = project?.fullDescription?.[key];
+
+                  return (
+                    <div key={key}>
+                      <h3 className="font-medium text-white mb-1">{label}</h3>
+
+                      {Array.isArray(content) ? (
+                        <ul className="list-disc list-inside space-y-1">
+                          {content.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="whitespace-pre-line">{content}</p>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* Sectioned Content */}
             {Object.entries(SECTION_NAMES).map(([id, title]) => (
               <ProjectSection
                 key={id}
@@ -146,12 +188,12 @@ function ProjectPage() {
                 title={title}
                 content={project?.fullDescription?.[id]?.content}
                 images={project?.fullDescription?.[id]?.images}
-                mainImage={id === 'overview' ? project?.image : null}
                 forwardedRef={sectionRefs[id]}
               />
             ))}
           </div>
         </main>
+
       </div>
     </div>
   );

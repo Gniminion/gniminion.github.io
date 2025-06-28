@@ -1,44 +1,17 @@
-import { useState } from "react";
 import Skill from "./Skill";
 import Experience from "./Experience";
-
-const PROFILE_IMAGE = {
-  src: "me.webp",
-  alt: "Photo of Mu Zhang",
-};
-
-const ABOUT_TEXT = {
-  highlight: "I'm a data enthusiast interested in delivering intuitive visualisations for technical concepts.",
-  description: "People call me MingMing, and a lot of my interests relate to nerdy media. When I'm not designing or coding, you can also find me editing videos and translating!"
-};
+import { PROFILE_IMAGE, ABOUT_TEXT } from "../../data/about";
 
 function About() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError] = useState(false);
-
-  // const handleImageLoad = () => {
-  //   setImageLoaded(true);
-  //   setImageError(false);
-  // };
 
   const renderPfp = () => (
     <div className="flex flex-col w-full bg-dark2 rounded-lg overflow-hidden border border-dark3">
       <div className="relative">
-        {/* {!imageLoaded && !imageError && (
-          <div className="absolute inset-0 bg-dark2 animate-pulse flex items-center justify-center">
-            <span className="text-gray">Loading image...</span>
-          </div>
-        )} */}
         
         <img 
           src={PROFILE_IMAGE.src}
           alt={PROFILE_IMAGE.alt}
           className={`w-full h-auto object-cover max-w-full transition-opacity duration-300`}
-          //    ${
-          //   imageLoaded ? 'opacity-100' : 'opacity-0'
-          // }`}
-          // onLoad={handleImageLoad}
-          loading="eager" 
         />
         
       </div>
@@ -47,9 +20,9 @@ function About() {
 
   const renderAboutTxt = () => (
     <div className="text-sm md:text-base text-left bg-dark2 p-6 md:p-8 rounded-lg flex flex-col gap-4 w-full">
-      <p className="font-bold"> 
+      <p className="font-semibold"> 
         I'm a data enthusiast interested in delivering 
-        <span className="text-primary"> intuitive visualisations for technical concepts. </span> 
+        <span className="text-primary font-semibold"> intuitive visualisations for technical concepts. </span> 
       </p>
       <div>
         <p className="text-gray">{ABOUT_TEXT.description}</p>

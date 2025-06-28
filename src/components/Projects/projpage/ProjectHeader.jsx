@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faTimes, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faTimes, faBars, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 function ProjectHeader({ project, isMobileMenuOpen, setIsMobileMenuOpen, onBackClick }) {
   return (
@@ -18,7 +18,7 @@ function ProjectHeader({ project, isMobileMenuOpen, setIsMobileMenuOpen, onBackC
             rel="noopener noreferrer"
             className="text-primary hover:underline transition-colors cursor-pointer"
           >
-            View Project ↗
+            View Project <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
           </a>
         )}
         <button

@@ -55,7 +55,7 @@ function Projects() {
               : "border border-dark3 text-gray hover:cursor-pointer"
           }`}
         >
-          {category}
+          <span className="font-medium">{category}</span>
         </button>
       ))}
     </div>

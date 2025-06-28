@@ -1,43 +1,8 @@
 import { useState } from "react";
+import { EXPERIENCES, EDUCATION } from "../../data/about";
 
 function Experience() {
   const [activeTab, setActiveTab] = useState("Experience");
-
-  const experiences = [
-    {
-      logo: "mikomiko.png",
-      institution: "Mikomiko SG | 2025",
-      role: "UX/UI Designer and Product Management",
-      description: "Providing intuitive user interfaces for a AI tool platform. Involved in frontend development of product websites.",
-    },
-    {
-      logo: "waterloo.png",
-      institution: "UW Mathematics Faculty | 2024",
-      role: "Animator for Educational Works",
-      description: "Designed, storyboarded, and edited videos for a learning how to learn series.",
-    },
-  ];
-
-  const education = [
-    {
-      logo: "waterloo.png",
-      institution: "University of Waterloo | 2023 - 2028",
-      degree: "Bachelor of Mathematics (Computational Mathematics & Biostatistics)",
-      description: "Relevant coursework in statistical analysis, data structures, object oriented programming, bioinformatics, and more.",
-    },
-    {
-      logo: "coursera.png",
-      institution: "Coursera | 2024",
-      degree: "Google Data Analytics Certificate",
-      description: "Completed modules in database foundations and computational tools with Excel, SQL, R, and Tableau.",
-    },
-    {
-      logo: "ib.png",
-      institution: "Nexus International School | 2020 - 2023",
-      degree: "International Baccalaureate Bilingual Diploma",
-      description: "High scoring in Higher Level Mathematics, Biology, and Computer Science.",
-    },
-  ];
 
   return (
     <div className="mx-auto p-4 lg:p-6 bg-dark2 text-white rounded-lg">
@@ -50,7 +15,7 @@ function Experience() {
           }`}
           onClick={() => setActiveTab("Experience")}
         >
-          <span className="text-sm md:text-base">Experience</span>
+          <h3 className="text-sm md:text-base">Experience</h3>
         </button>
 
         <button
@@ -61,14 +26,14 @@ function Experience() {
           }`}
           onClick={() => setActiveTab("Education")}
         >
-          <span className="text-sm md:text-base">Education</span>
+          <h3 className="text-sm md:text-base">Education</h3>
         </button>
       </div>
 
       <div key={activeTab}
            className="mt-4 border border-dark3 bg-dark rounded-lg p-4 overflow-y-auto transition-all fade-in opacity-200 duration-500 max-h-[400px] ">
         {activeTab === "Experience"
-          ? experiences.map((exp, index) => (
+          ? EXPERIENCES.map((exp, index) => (
               <div key={index} className="mb-6 last:mb-0">
                 <div className="flex text-left items-start gap-3">
                   <img 
@@ -86,7 +51,7 @@ function Experience() {
                 </p>
               </div>
             ))
-          : education.map((edu, index) => (
+          : EDUCATION.map((edu, index) => (
               <div key={index} className="mb-6 last:mb-0">
                 <div className="flex text-left items-start gap-3">
                   <img 

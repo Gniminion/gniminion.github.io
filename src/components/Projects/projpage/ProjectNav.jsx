@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 function ProjectNav({ 
   project, 
@@ -28,7 +28,7 @@ function ProjectNav({
 
       {/* Project Info */}
       <div className="flex-1/6">
-        <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
+        <h2 className="text-2xl  mb-4">{project.title}</h2>
         
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags?.map(tag => (
@@ -45,7 +45,7 @@ function ProjectNav({
             rel="noopener noreferrer"
             className="text-primary hover:underline transition-colors cursor-pointer inline-block"
           >
-            View Project ↗
+            View Project <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
           </a>
         )}
       </div>
@@ -60,12 +60,12 @@ function ProjectNav({
               className={`
                 flex cursor-pointer transition-colors pl-4 -ml-px border-l-2
                 ${activeSection === id 
-                  ? 'text-white font-bold border-primary' 
+                  ? 'text-white  border-primary' 
                   : 'text-gray hover:text-white border-transparent hover:border-primary'
                 }
               `}
             >
-              <span>{label}</span>
+              <h4>{label}</h4>
             </li>
           ))}
         </ul>
