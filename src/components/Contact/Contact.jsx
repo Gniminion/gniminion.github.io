@@ -37,7 +37,7 @@ function Contact() {
           onSubmit={sendEmail} 
           className="text-left lg:col-span-2 flex flex-col p-4 sm:p-6 bg-dark2 rounded-lg"
         >
-          <label className="text-sm sm:text-md font-semibold mb-2">Name</label>
+          <label className="text-sm sm:text-md font-medium mb-2">Name</label>
           <input
             type="text"
             name="user_name"
@@ -46,7 +46,7 @@ function Contact() {
             placeholder="Your Name"
           />
 
-          <label className="text-sm sm:text-md font-semibold mb-2">Email</label>
+          <label className="text-sm sm:text-md font-medium mb-2">Email</label>
           <input
             type="email"
             name="user_email"
@@ -55,7 +55,7 @@ function Contact() {
             placeholder="Your Email"
           />
 
-          <label className="text-sm sm:text-md font-semibold mb-2">Message</label>
+          <label className="text-sm sm:text-md font-medium mb-2">Message</label>
           <textarea
             name="message"
             required
@@ -64,11 +64,11 @@ function Contact() {
             rows="10"
           ></textarea>
 
-          <div className="flex flex-col items-center">
+          <h4 className="flex flex-col items-center">
             <input
               type="submit"
               value="Send Email"
-              className="w-full px-6 py-2 rounded-md bg-primary font-semibold cursor-pointer hover:bg-primary-dark transition-colors"
+              className="w-full px-6 py-2 rounded-md bg-primary font-medium cursor-pointer hover:bg-primary-dark transition-colors"
             />
             {status === 'SUCCESS' && (
               <p className="text-primary mt-2 text-sm sm:text-base">Email sent successfully!</p>
@@ -76,7 +76,7 @@ function Contact() {
             {status === 'FAIL' && (
               <p className="text-gray mt-2 text-sm sm:text-base">Failed to send email. Please try again later.</p>
             )}
-          </div>
+          </h4>
         </form>
       </div>
     </div>

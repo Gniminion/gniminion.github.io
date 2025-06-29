@@ -43,7 +43,7 @@ function Skill() {
           >
             <FontAwesomeIcon icon={skill.logo} size="2x" className="mr-4 text-primary" />
             <div>
-              <h3 className="text-sm md:text-base font-semibold">{skill.name}</h3>
+              <h3 className="text-sm md:text-base font-medium">{skill.name}</h3>
               <p className="text-sm md:text-base text-gray">{skill.description}</p>
             </div>
           </motion.div>

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 function ProjCard({ title, image, desc, tags, priority }) {
   const [hovered, setHovered] = useState(false);
@@ -57,7 +59,13 @@ function ProjCard({ title, image, desc, tags, priority }) {
       </div>
       
       <div className="mt-4 text-left flex-1">
-        <h2 className="text-lg md:text-xl text-white font-medium">{title}</h2>
+        
+        <h2 className="text-lg md:text-xl text-white font-medium">{title}
+          {!priority && (
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2 text-base" />
+          )}
+        </h2>
+        
         {tags && renderTags()}
         <p className="text-sm md:text-base text-gray mt-2">{desc}</p>
       </div>

@@ -5,10 +5,10 @@ export const PROJECTS = [
     title: "Tech Investments Analysis", 
     category: ["Data", "Development"], 
     image: "cxc.png", 
-    desc: "Building a predictive model and dashboard to advise investors in Canada's tech industry",
+    desc: "Building a predictive model and dashboard to advise investors in Canada's tech industry.",
     priority: true,
     link: "https://github.com/Gniminion/tech-investment-analysis",
-    tags: ["Python", "Pandas", "Scikit-learn", "Dash", "Git", "Machine Learning", "Data Visualization"],
+    tags: ["Python", "Pandas", "Git", "Dash", "Scikit-learn", "Machine Learning", "Data Visualization"],
     fullDescription: {
       role: ` Data Scientist
       Frontend Developer
@@ -38,42 +38,7 @@ export const PROJECTS = [
       },
     
       problem: {
-        content: `# Pluto
-
-**Pluto** (minor-planet designation: *134340 Pluto*)
-is a
-[dwarf planet](https://en.wikipedia.org/wiki/Dwarf_planet)
-in the
-[Kuiper belt](https://en.wikipedia.org/wiki/Kuiper_belt).
-
-## History
-
-In the 1840s,
-[Urbain Le Verrier](https://wikipedia.org/wiki/Urbain_Le_Verrier)
-used Newtonian mechanics to predict the position of the
-then-undiscovered planet
-[Neptune](https://wikipedia.org/wiki/Neptune)
-after analyzing perturbations in the orbit of
-[Uranus](https://wikipedia.org/wiki/Uranus).
-
-***
-
-Just a link: www.nasa.gov.
-
-* Lists
-* [ ] todo
-* [x] done
-
-A table:
-
-| a | b |
-| - | - |
-
-<details><summary>Show example</summary>
-
-</details>
-
-      `
+        content: `Page Work in Progress`
       },      
     
       development: {
@@ -83,23 +48,21 @@ The interface allows users to filter by category (e.g., FinTech, AI), location (
         
         images: [
           {
-            src: "sector_heatmap.png",
-            caption: "Heatmap of tech investment categories across Canadian regions"
-          },
-          {
-            src: "model-output.png",
-            caption: "Predictive model outputs showing regions with highest future potential"
+            src: "model-acc.png",
+            caption: "ML model accuracy comparison"
           }
         ]
       },
     
       outcome: {
-        content: `Our project was recognized at the [CxC 2025 showcase](https://devpost.com/software/runql-canadian-tech-investment-analysis?ref_content=my-projects-tab&ref_feature=my_projects) as a standout example of applied data science for public-good investment analysis.
-      ## Key results:    
-    - Built a reusable pipeline for cleaning and analyzing investment datasets
-    - Delivered a predictive tool and dashboard that can be extended for real-world investor use
-    - Open-sourced the project for future contributors and further development
-We learned how to distill complex data into a usable decision-making product under tight hackathon timelines, combining technical rigor with user-centered design.`
+        content: `Our project was recognized at the [CxC 2025 RunQL Track](https://devpost.com/software/runql-canadian-tech-investment-analysis?ref_content=my-projects-tab&ref_feature=my_projects) as a runner up project.
+
+## Key results:    
+1 Built a reusable pipeline for cleaning and analyzing investment datasets
+2 Delivered a predictive tool and dashboard that can be extended for real-world investor use
+3 Open-sourced the project for future contributors and further development
+
+We learned how to distill complex data into a comprehensive report under tight hackathon timelines, combining technical rigor with user-centered design.`
       }
     }
     
@@ -108,16 +71,10 @@ We learned how to distill complex data into a usable decision-making product und
     title: "Learn More Video Series", 
     category: "Design", 
     image: "learnmore.png",
-    desc: "Storyboarding, designing, and editing fun animated videos for students to learn effectively",
-    priority: true,
+    desc: "Storyboarding, designing, and editing videos to help students approach learning effectively.",
+    priority: false,
     link: "https://www.youtube.com/@LearnMoreWithDanWolczuk/videos",
-    tags: ["Photoshop", "Premiere Pro", "Davinci Resolve", "Storyboarding", "Animation"],
-    fullDescription: {
-      overview: "Learn More is an educational video series designed to make complex topics accessible and engaging for students. Through animation and storytelling, we transform challenging concepts into memorable learning experiences.",
-      problem: "Traditional educational content often fails to engage students, leading to reduced learning outcomes. There was a need for content that could both educate and entertain while maintaining high educational standards.",
-      development: "Each video goes through a comprehensive production pipeline: concept development, storyboarding, animation design in Photoshop, and final editing in Davinci Resolve. We focus on creating visually appealing content that maintains educational integrity.",
-      outcome: "The channel has grown to over 10,000 subscribers, with teachers regularly incorporating our videos into their curriculum. Student feedback indicates improved understanding and retention of complex topics."
-    }
+    tags: ["Photoshop", "Premiere Pro", "Storyboarding", "Animation"],
   }, 
   { 
     title: "Subletting in California", 
@@ -149,7 +106,7 @@ We learned how to distill complex data into a usable decision-making product und
   { 
     title: "Personal Art Portfolio", 
     category: ["Design"], 
-    image: "prototype.png",
+    image: "artport.png",
     desc: "A broad collection of my smaller works, including educational comics and performance photography.",
     priority: false,
     link: "https://drive.google.com/file/d/1_bqNCADLANv-hy4M5-cUlOTYx1igkg8y/view?usp=sharing",

@@ -9,6 +9,8 @@ const Icon = L.icon({
 });
 
 const position = [43.47, -80.54];
+const singapore = [1.2921, 103.7848]; // Science Park, Singapore
+const center = [30,20];
 
 function Map() {
   const mapRef = useRef(null);
@@ -25,8 +27,8 @@ function Map() {
   return (
     <div ref={containerRef} className="relative w-full h-full">
       <MapContainer 
-        center={position} 
-        zoom={13}
+        center={center} 
+        zoom={1}
         scrollWheelZoom={false}
         whenCreated={(map) => {
           mapRef.current = map;
@@ -40,8 +42,14 @@ function Map() {
         />
         <Marker position={position} icon={Icon}>
           <Popup>
-            I am currently based in 
+            I am studying in 
             <br/>University of Waterloo, ON, Canada.
+          </Popup>
+        </Marker>
+        <Marker position={singapore} icon={Icon}>
+          <Popup>
+            I am currently interning in Mikomiko SG,
+            <br />Science Park, Singapore.
           </Popup>
         </Marker>
       </MapContainer>
