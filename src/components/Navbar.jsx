@@ -100,7 +100,7 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
         </h1>
         <h1 className="text-left mt-4 text-white">
           Data Analyst <br />
-          UX / UI Designer <br />
+          Product Designer <br />
           Web Developer
         </h1>
         <a href={SOCIAL_LINKS.linkedin}>

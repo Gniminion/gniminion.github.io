@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProjectNav from './ProjectNav';
 import ProjectHeader from './ProjectHeader';
@@ -105,7 +105,7 @@ function ProjectPage() {
           sections={SECTION_NAMES}
           activeSection={activeSection}
           onSectionClick={scrollToSection}
-          onBackClick={() => navigate('/')}
+          onBackClick={() => navigate('/#projects')}
         />
       </nav>
 
@@ -115,7 +115,7 @@ function ProjectPage() {
           project={project}
           isMobileMenuOpen={isMobileMenuOpen}
           setIsMobileMenuOpen={setIsMobileMenuOpen}
-          onBackClick={() => navigate('/')}
+          onBackClick={() => navigate('/#projects')}
         />
 
         {/* Mobile Menu */}
@@ -191,6 +191,15 @@ function ProjectPage() {
                 forwardedRef={sectionRefs[id]}
               />
             ))}
+
+            <section>
+              <button
+                className="max-w-xl rounded-2xl bg-primary py-2 px-4 cursor-pointer"
+                onClick={() => navigate('/#projects')}
+              >
+                <h2>Next Project →</h2>
+              </button>
+            </section>
           </div>
         </main>
 

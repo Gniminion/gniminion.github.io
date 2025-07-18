@@ -11,7 +11,7 @@ function About() {
         <img 
           src={PROFILE_IMAGE.src}
           alt={PROFILE_IMAGE.alt}
-          className={`w-full h-auto object-cover max-w-full transition-opacity duration-300`}
+          className={`w-full h-auto object-cover max-w-full`}
         />
         
       </div>
@@ -20,9 +20,9 @@ function About() {
 
   const renderAboutTxt = () => (
     <div className="text-sm md:text-base text-left bg-dark2 p-6 md:p-8 rounded-lg flex flex-col gap-4 w-full">
-      <p className="font-semibold"> 
+      <p className="font-medium"> 
         I'm a data enthusiast interested in delivering 
-        <span className="text-primary font-semibold"> intuitive visualisations for technical concepts. </span> 
+        <span className="text-primary font-medium"> intuitive visualisations for technical concepts. </span> 
       </p>
       <div>
         <p className="text-gray">{ABOUT_TEXT.description}</p>

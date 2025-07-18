@@ -2,7 +2,7 @@ import { faPython, faReact, faRProject, faGitAlt, faFigma, faCss3Alt } from "@fo
 import { faDatabase, faPenNib } from "@fortawesome/free-solid-svg-icons";
 
 export const PROFILE_IMAGE = {
-    src: "me.webp",
+    src: "me.png",
     alt: "Photo of Mu Zhang",
   };
   

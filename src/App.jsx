@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useRef, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Project from './components/projects/Projects';
 import About from "./components/about/About";
@@ -20,28 +20,46 @@ export default function App() {
     window.scrollTo(0, 0);
   };
 
-  const MainContent = () => (
-    <div className="flex h-screen text-white overflow-hidden ">
-      <Navbar scrollToSection={scrollToSection} homeRef={homeRef} projectsRef={projectsRef} contactRef={contactRef} />
-      
-      <div className="flex-1 overflow-y-auto p-8 lg:p-12 w-full max-w-5xl mx-auto">
-        <section ref={homeRef} className="-mt-4">
-          <h2 className="text-left text-3xl"> ABOUT <span className="text-primary">MU ZHANG</span></h2>
-          <About/>
-        </section>
+  const MainContent = () => {
+    const homeRef = useRef(null);
+    const projectsRef = useRef(null);
+    const contactRef = useRef(null);
+    const location = useLocation();
+    
+    const scrollToSection = (ref) => {
+      ref.current?.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo(0, 0);
+    };
 
-        <section ref={projectsRef} className="mt-8">
-          <h2 className="text-left text-3xl mb-8">  PROJECTS</h2>
-          <Project/>
-        </section>
+    useEffect(() => {
+      if (location.hash === "#projects") {
+        projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+      }
+    }, [location]);
 
-        <section ref={contactRef} className="mt-8 mb-4">
-          <h2 className="text-left text-3xl">CONTACT</h2>
-          <Contact/>
-        </section>
+    return (
+      <div className="flex h-screen text-white overflow-hidden ">
+        <Navbar scrollToSection={scrollToSection} homeRef={homeRef} projectsRef={projectsRef} contactRef={contactRef} />
+        
+        <div className="flex-1 overflow-y-auto p-8 lg:p-12 w-full max-w-5xl mx-auto">
+          <section ref={homeRef} id="home" className="-mt-4">
+            <h2 className="text-left text-3xl"> ABOUT <span className="text-primary">MU ZHANG</span></h2>
+            <About/>
+          </section>
+
+          <section ref={projectsRef} id="projects" className="mt-8">
+            <h2 className="text-left text-3xl mb-8">  PROJECTS</h2>
+            <Project/>
+          </section>
+
+          <section ref={contactRef} id="contact" className="mt-8 mb-4">
+            <h2 className="text-left text-3xl">CONTACT</h2>
+            <Contact/>
+          </section>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <Router basename={BASE_URL}>

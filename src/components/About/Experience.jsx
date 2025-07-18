@@ -10,7 +10,7 @@ function Experience() {
         <button
           className={`hover:cursor-pointer border border-dark3 flex-1 px-2 py-2 rounded-l-lg transition-all ease-in-out duration-500 ${
             activeTab === "Experience"
-              ? "bg-dark3 text-white font-semibold"
+              ? "bg-dark3 text-white font-medium"
               : "bg-dark text-gray"
           }`}
           onClick={() => setActiveTab("Experience")}
@@ -21,7 +21,7 @@ function Experience() {
         <button
           className={`hover:cursor-pointer border border-dark3 flex-1 px-2 py-2 rounded-r-lg transition-all ease-in-out duration-500 ${
             activeTab === "Education"
-              ? "bg-dark3 text-white font-semibold"
+              ? "bg-dark3 text-white font-medium"
               : "bg-dark text-gray"
           }`}
           onClick={() => setActiveTab("Education")}
@@ -42,7 +42,7 @@ function Experience() {
                     className="h-10 w-10 md:h-12 md:w-12 flex-shrink-0 object-contain"
                   />
                   <div className="flex-1 min-w-0"> 
-                    <h3 className="text-sm md:text-base font-semibold break-words">{exp.role}</h3>
+                    <h3 className="text-sm md:text-base font-medium break-words">{exp.role}</h3>
                     <p className="text-xs md:text-sm text-gray">{exp.institution}</p>
                   </div>
                 </div>
@@ -60,7 +60,7 @@ function Experience() {
                     className="h-10 w-10 md:h-12 md:w-12 flex-shrink-0 object-contain"
                   />
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-sm md:text-base font-semibold break-words">{edu.degree}</h3>
+                    <h3 className="text-sm md:text-base font-medium break-words">{edu.degree}</h3>
                     <p className="text-xs md:text-sm text-gray">{edu.institution}</p>
                   </div>
                 </div>

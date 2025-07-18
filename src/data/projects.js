@@ -8,7 +8,7 @@ export const PROJECTS = [
     desc: "Building a predictive model and dashboard to advise investors in Canada's tech industry.",
     priority: true,
     link: "https://github.com/Gniminion/tech-investment-analysis",
-    tags: ["Python", "Pandas", "Git", "Dash", "Scikit-learn", "Machine Learning", "Data Visualization"],
+    tags: ["Python", "Pandas", "Git", "Dash", "Scikit-learn", "Machine Learning", "Data Visualisation"],
     fullDescription: {
       role: ` Data Scientist
       Frontend Developer
@@ -28,41 +28,62 @@ export const PROJECTS = [
       RunQL Challenge`,
     
       overview: {
-        content: `This hackathon project for [CxC 2025](https://devpost.com/software/runql-canadian-tech-investment-analysis?ref_content=my-projects-tab&ref_feature=my_projects) aims to help investors make data-driven decisions in Canada's rapidly evolving tech sector. By analyzing historical investment data and market trends provided by RunQL, our team developed a predictive model and interactive dashboard for investment insights.`,
+        content: `This data science hackathon project for [CxC 2025](https://devpost.com/software/runql-canadian-tech-investment-analysis?ref_content=my-projects-tab&ref_feature=my_projects) aims to help investors make data-driven decisions in Canada's rapidly evolving tech sector. By analysing historical investment data and market trends provided by RunQL, our team developed a predictive model and dashboard for investment insights. 
+
+I was responsible for data cleaning, preprocessing, regional visualisation, predictive modelling, and final deployment and presentation.
+
+Our [comprehensive dashboard](https://tech-investment-analysis.onrender.com/) shows trends from funding stages, investor demographics, regions, and more. The interface allows users to explore trends interactively and read about related insights.
+`,
         images: [
           {
             src: "tidash.png",
-            caption: "Our interactive dashboard showing trends from funding stages, investor demographics, regions, and more"
+            caption: "In our dashboard, Investment Trends Overtime trends can be filtered by year, province, and funding stage."
           }
         ]
       },
     
       problem: {
-        content: `Page Work in Progress`
+        content: `
+Canada’s tech ecosystem is growing rapidly, yet investment data is often fragmented, complex, or difficult to interpret.
+Stakeholders lack accessible tools to:
+* Understand historical funding trends by region and sector
+* Identify which sectors are rising or slowing in investor interest
+* Forecast future investment dynamics
+
+### Our goal was to turn messy investment data into usable, comprehensive insights through an interactive, open platform.`
       },      
     
       development: {
-        content: `We tackled the challenge by transforming messy investment datasets into actionable insights.
+        content: `
+We tackled the challenge by transforming unstructured funding datasets into a refined pipeline for data cleaning, aggregation, and exploration.
 
-The interface allows users to filter by category (e.g., FinTech, AI), location (e.g., Toronto, Vancouver), and funding round to explore trends interactively.`,
+### My contributions included:
+* Data Cleaning & Preprocessing: Resolved inconsistencies across sectors, deal sizes, and regional entries and removed irrelevant columns, aggregating into comprehensive datasets.
+* Regional Analysis: Compared funding dynamics in hubs like Toronto, Vancouver, Montreal, and emerging cities, developing an interactive dot map.
+* Dashboard Skeleton: Built the interface framework in Dash for dynamic visualisation
+* Machine Learning Models: Developed and evaluated (using k-fold cross-validation) Random Forest regressors/classifiers to forecast sectoral funding probabilities, determining the top 5 predicted sectors with the most investments in 2025.
+
+
+
+`,
         
         images: [
           {
-            src: "model-acc.png",
-            caption: "ML model accuracy comparison"
+            src: "modeltest.png",
+            caption: "ML model accuracy comparison to determine Random Forest approach"
           }
         ]
       },
     
       outcome: {
-        content: `Our project was recognized at the [CxC 2025 RunQL Track](https://devpost.com/software/runql-canadian-tech-investment-analysis?ref_content=my-projects-tab&ref_feature=my_projects) as a runner up project.
+        content: `Our project was recognised at the [CxC 2025 RunQL Track](https://devpost.com/software/runql-canadian-tech-investment-analysis?ref_content=my-projects-tab&ref_feature=my_projects) as a runner up project.
 
-## Key results:    
-1 Built a reusable pipeline for cleaning and analyzing investment datasets
-2 Delivered a predictive tool and dashboard that can be extended for real-world investor use
-3 Open-sourced the project for future contributors and further development
+### Key results:    
+1. Built a pipeline for cleaning and analysing investment datasets
+2. Delivered a predictive tool and dashboard that can be extended for real-world investor use
+3. Open-sourced the project for future contributors and further development
 
-We learned how to distill complex data into a comprehensive report under tight hackathon timelines, combining technical rigor with user-centered design.`
+We learned how to distill complex data into a [comprehensive report](https://docs.google.com/document/d/1AiPb38hWNCZXd5Xq7SNgfiy1YsRb904nUEvD_FRxBnE/edit?tab=t.0) under tight hackathon timelines, combining technical rigor with user-centered design.`
       }
     }
     
@@ -83,7 +104,7 @@ We learned how to distill complex data into a comprehensive report under tight h
     desc: "Advising real estate stakeholders on the housing trends in California through exploratory analysis.",
     priority: false,
     link: "https://github.com/Gniminion/rchive/blob/main/Datafest%202025/DataFest%202025.pdf",
-    tags: ["R", "Data Visualization", "Market Research"]
+    tags: ["R", "Data Visualisation", "Market Research"]
   },
   { 
     title: "MikoMiko Product Website", 
