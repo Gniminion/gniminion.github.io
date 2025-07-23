@@ -8,7 +8,8 @@ const OBSERVER_THRESHOLD = 0;
 
 const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/mu-mingming-zhang/",
-  github: "https://github.com/Gniminion"
+  github: "https://github.com/Gniminion",
+  resume: "https://drive.google.com/file/d/1DsYicfkFPkmvNDjExvnbvs1KwPESKi0z/view?usp=sharing"
 };
 
 const NAVIGATION_ITEMS = [
@@ -103,8 +104,8 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
           Product Designer <br />
           Web Developer
         </h1>
-        <a href={SOCIAL_LINKS.linkedin}>
-          <button className="px-2 py-1 border-2 border-gray text-sm text-gray rounded cursor-pointer mt-4 mb-8">
+        <a href={SOCIAL_LINKS.resume} target="_blank" rel="noopener noreferrer" >
+          <button className="px-2 py-1 border-2 border-primary text-sm text-primary rounded cursor-pointer mt-4 mb-8">
             Resume
           </button>
         </a>

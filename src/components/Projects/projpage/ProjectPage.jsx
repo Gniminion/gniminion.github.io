@@ -147,7 +147,7 @@ function ProjectPage() {
             {project?.image && (
               <div className="aspect-video mb-12">
                 <img 
-                  src={`/portfolio/projects/${project.image}`}
+                  src={`/projects/${project.image}`}
                   alt={project.title}
                   className="w-full h-full object-cover rounded-lg"
                   loading="lazy"

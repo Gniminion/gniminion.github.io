@@ -12,7 +12,7 @@ function ProjectSection({
   const getImagePath = (imageName) => {
     if (!imageName) return '';
     if (imageName.startsWith('http')) return imageName;
-    return `/portfolio/projects/${imageName}`;
+    return `/projects/${imageName}`;
   };
 
   return (

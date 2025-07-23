@@ -43,7 +43,7 @@ function ProjCard({ title, image, desc, tags, priority }) {
             className={`absolute top-0 left-0 w-full h-full object-cover transition-all duration-300 ${
               hovered && priority ? 'opacity-30' : ''
             }`}
-            src={`/portfolio/projects/${image}`} 
+            src={`/projects/${image}`} 
             alt={title}
           />
           {priority && (
