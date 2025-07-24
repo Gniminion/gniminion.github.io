@@ -90,6 +90,16 @@ function ProjectPage() {
     };
   }, []);
 
+  // Set document title to project name
+  useEffect(() => {
+    if (project) {
+      document.title = project.title;
+    }
+    return () => {
+      document.title = "Mu Zhang Portfolio";
+    };
+  }, [project]);
+
   const scrollToSection = (sectionId) => {
     sectionRefs[sectionId]?.current?.scrollIntoView({ behavior: 'smooth' });
     setActiveSection(sectionId);

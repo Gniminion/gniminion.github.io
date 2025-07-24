@@ -1,22 +1,46 @@
 import Skill from "./Skill";
 import Experience from "./Experience";
 import { PROFILE_IMAGE, ABOUT_TEXT } from "../../data/about";
+import { useState } from 'react';
 
 function About() {
 
-  const renderPfp = () => (
-    <div className="flex flex-col w-full bg-dark2 rounded-lg overflow-hidden border border-dark3">
-      <div className="relative">
-        
-        <img 
-          src={PROFILE_IMAGE.src}
-          alt={PROFILE_IMAGE.alt}
-          className={`w-full h-auto object-cover max-w-full`}
-        />
-        
+  const renderPfp = () => {
+    const [loaded, setLoaded] = useState(false);
+    return (
+      <div className="flex flex-col w-full bg-dark2 rounded-lg overflow-hidden border border-dark3">
+        <div className="relative">
+          {/* Blurred placeholder */}
+          {!loaded && (
+            <img
+              src="/me-blur.png"
+              alt={PROFILE_IMAGE.alt}
+              style={{
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+                filter: 'blur(20px)',
+                transition: 'opacity 0.3s',
+                opacity: loaded ? 0 : 1,
+                objectFit: 'cover',
+              }}
+            />
+          )}
+          {/* Full image */}
+          <img
+            src={PROFILE_IMAGE.src}
+            alt={PROFILE_IMAGE.alt}
+            className={`w-full h-auto object-cover max-w-full`}
+            style={{
+              transition: 'opacity 0.3s',
+              opacity: loaded ? 1 : 0,
+            }}
+            onLoad={() => setLoaded(true)}
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const renderAboutTxt = () => (
     <div className="text-sm md:text-base text-left bg-dark2 p-6 md:p-8 rounded-lg flex flex-col gap-4 w-full">
