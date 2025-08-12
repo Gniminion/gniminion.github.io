@@ -41,7 +41,7 @@ export default function App() {
       <div className="flex h-screen text-white overflow-hidden ">
         <Navbar scrollToSection={scrollToSection} homeRef={homeRef} projectsRef={projectsRef} contactRef={contactRef} />
         
-        <div className="flex-1 overflow-y-auto p-8 lg:p-12 w-full max-w-5xl mx-auto">
+        <div className="flex-1 overflow-y-auto p-8 lg:p-12 w-full max-w-6xl mx-auto">
           <section ref={homeRef} id="home" className="-mt-4">
             <h2 className="text-left text-3xl"> ABOUT <span className="text-primary">MU ZHANG</span></h2>
             <About/>

@@ -2,7 +2,7 @@ import { faPython, faReact, faRProject, faGitAlt, faFigma, faCss3Alt } from "@fo
 import { faDatabase, faPenNib } from "@fortawesome/free-solid-svg-icons";
 
 export const PROFILE_IMAGE = {
-    src: "me.png",
+    src: "me.webp",
     alt: "Photo of Mu Zhang",
   };
   
@@ -13,13 +13,13 @@ export const PROFILE_IMAGE = {
   
 export const EXPERIENCES = [
     {
-      logo: "mikomiko.png",
+      logo: "mikomiko.webp",
       institution: "Mikomiko SG · 2025",
       role: "UX/UI Designer and Product Management",
       description: "Providing intuitive user interfaces for a AI tool platform. Involved in frontend development of product websites.",
     },
     {
-      logo: "waterloo.png",
+      logo: "waterloo.webp",
       institution: "UW Mathematics Faculty · 2024",
       role: "Animator for Educational Works",
       description: "Designed, storyboarded, and edited videos for a learning how to learn series.",
@@ -28,19 +28,19 @@ export const EXPERIENCES = [
 
 export const EDUCATION = [
     {
-      logo: "waterloo.png",
+      logo: "waterloo.webp",
       institution: "University of Waterloo · 2023 - 2028",
       degree: "Bachelor of Mathematics (Computational Mathematics & Biostatistics)",
       description: "Relevant coursework in statistical analysis, data structures, object oriented programming, bioinformatics, and more.",
     },
     {
-      logo: "coursera.png",
+      logo: "coursera.webp",
       institution: "Coursera · 2024",
       degree: "Google Data Analytics Certificate",
       description: "Completed modules in database foundations and computational tools with Excel, SQL, R, and Tableau.",
     },
     {
-      logo: "ib.png",
+      logo: "ib.webp",
       institution: "Nexus International School · 2020 - 2023",
       degree: "International Baccalaureate Bilingual Diploma",
       description: "High scoring in Higher Level Mathematics, Biology, and Computer Science.",

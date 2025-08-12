@@ -4,7 +4,7 @@ export const PROJECTS = [
   { 
     title: "Tech Investments Analysis", 
     category: ["Data", "Development"], 
-    image: "cxc.png", 
+    image: "cxc.webp", 
     desc: "Building a predictive model and dashboard to advise investors in Canada's tech industry.",
     priority: true,
     link: "https://github.com/Gniminion/tech-investment-analysis",
@@ -36,7 +36,7 @@ Our [comprehensive dashboard](https://tech-investment-analysis.onrender.com/) sh
 `,
         images: [
           {
-            src: "tidash.png",
+            src: "tidash.webp",
             caption: "In our dashboard, Investment Trends Overtime trends can be filtered by year, province, and funding stage."
           }
         ]
@@ -69,7 +69,7 @@ We tackled the challenge by transforming unstructured funding datasets into a re
         
         images: [
           {
-            src: "modeltest.png",
+            src: "modeltest.webp",
             caption: "ML model accuracy comparison to determine Random Forest approach"
           }
         ]
@@ -89,27 +89,36 @@ We learned how to distill complex data into a [comprehensive report](https://doc
     
   },
   { 
-    title: "Learn More Video Series", 
-    category: "Design", 
-    image: "learnmore.png",
-    desc: "Storyboarding, designing, and editing videos to help students approach learning effectively.",
+    title: "Modelling Cancer on a Chip Systems", 
+    category: ["Data"], 
+    image: "cancer.webp",
+    desc: "Using biological and mathematical models to understand and advance tumour drug delivery systems.",
     priority: false,
-    link: "https://www.youtube.com/@LearnMoreWithDanWolczuk/videos",
-    tags: ["Photoshop", "Premiere Pro", "Storyboarding", "Animation"],
-  }, 
+    link: "https://drive.google.com/file/d/1DG7go2jheZ0MGaO-mX_jS8KRhXHsdW-J/view?usp=drive_link",
+    tags: ["Research", "COSMOL", "Mathematical Modelling"]
+  },
   { 
     title: "Subletting in California", 
     category: "Data", 
-    image: "sublet.png",
+    image: "sublet.webp",
     desc: "Advising real estate stakeholders on the housing trends in California through exploratory analysis.",
     priority: false,
     link: "https://github.com/Gniminion/rchive/blob/main/Datafest%202025/DataFest%202025.pdf",
     tags: ["R", "Data Visualisation", "Market Research"]
   },
   { 
+    title: "Learn More Video Series", 
+    category: "Design", 
+    image: "learnmore.webp",
+    desc: "Storyboarding, designing, and editing videos to help students approach learning effectively.",
+    priority: false,
+    link: "https://www.youtube.com/@LearnMoreWithDanWolczuk/videos",
+    tags: ["Photoshop", "Premiere Pro", "Storyboarding", "Animation"],
+  }, 
+  { 
     title: "MikoMiko Product Website", 
     category: ["Design", "Development"], 
-    image: "mikoai.png",
+    image: "mikoai.webp",
     desc: "Developing an info site for an AI platform, increasing traction for product and recruitment.",
     priority: false,
     link: "https://mikomiko.ai",
@@ -118,7 +127,7 @@ We learned how to distill complex data into a [comprehensive report](https://doc
   { 
     title: "Conference Tracker", 
     category: ["Data", "Development"], 
-    image: "contrack.png",
+    image: "contrack.webp",
     desc: "A tool for front desk workers to efficiently manage attendee information and check in process.",
     priority: false,
     link: "https://github.com/Gniminion/conference-tracker",
@@ -127,7 +136,7 @@ We learned how to distill complex data into a [comprehensive report](https://doc
   { 
     title: "Personal Art Portfolio", 
     category: ["Design"], 
-    image: "artport.png",
+    image: "artport.webp",
     desc: "A broad collection of my smaller works, including educational comics and performance photography.",
     priority: false,
     link: "https://drive.google.com/file/d/1_bqNCADLANv-hy4M5-cUlOTYx1igkg8y/view?usp=sharing",
@@ -136,7 +145,7 @@ We learned how to distill complex data into a [comprehensive report](https://doc
   // { 
   //   title: "This Portfolio Site ↗", 
   //   category: ["Development"], 
-  //   image: "prototype.png",
+  //   image: "prototype.webp",
   //   desc: "A simple, intuitive portfolio template to showcase personal works",
   //   priority: false,
   //   link: "https://github.com/Gniminion/portfolio",

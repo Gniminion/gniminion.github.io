@@ -1,8 +1,8 @@
 # Personal Portfolio Website
 
-A modern, responsive portfolio website built with React and Vite.
+A responsive portfolio website built with React and Vite.
 
-## Quick Start
+## To use this as a template:
 
 ```bash
 # Install dependencies
@@ -15,11 +15,8 @@ npm run dev
 npm run build
 ```
 
-## Stack
+To add your own projects, modify the react markdown script in the data folder as appropriate. Set project priority to true for a customisable case study page.
 
-- React
-- Vite
-- Tailwind CSS
 
 ## License
 
