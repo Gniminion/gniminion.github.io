@@ -38,18 +38,12 @@ function Map() {
       >
         <TileLayer
           attribution='&copy; <a href="https://carto.com/">Carto</a>'
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.webp"
         />
         <Marker position={position} icon={Icon}>
           <Popup>
-            I am studying in 
+            I am interning at NeuroFlex and studying at
             <br/>University of Waterloo, ON, Canada.
-          </Popup>
-        </Marker>
-        <Marker position={singapore} icon={Icon}>
-          <Popup>
-            I am currently interning in Mikomiko SG,
-            <br />Science Park, Singapore.
           </Popup>
         </Marker>
       </MapContainer>

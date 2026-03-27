@@ -13,7 +13,7 @@ function About() {
           {/* Blurred placeholder */}
           {!loaded && (
             <img
-              src="/me-blur.png"
+              src="/me-blur.webp"
               alt={PROFILE_IMAGE.alt}
               style={{
                 position: 'absolute',

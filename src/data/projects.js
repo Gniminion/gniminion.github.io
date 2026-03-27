@@ -2,6 +2,95 @@ export const CATEGORIES = ["All", "Data", "Design", "Development"];
 
 export const PROJECTS = [
   { 
+    title: "ProtectSUS", 
+    category: ["Development", "Design"], 
+    image: "protectsus.webp", 
+    desc: "AI powered code auditor with GitHub integration that debates findings and generates PRs.",
+    priority: true,
+    link: "https://devpost.com/software/protetsus",
+    tags: ["Next.js", "Typescript", "NextAuth", "Github", "MongoDB", "Agentic AI"],
+    fullDescription: {
+      role: ` Full Stack / Frontend Developer
+      UI/UX Architect`,
+    
+      duration: `48 Hours
+      Jan 2026`,
+
+      deliverables:`Frontend Application
+      Admin Dashboard
+      Demo Video
+      Source Code
+      `,
+    
+      team: `4 Members
+      For NexHacks 2026
+      Best Use of MongoDB`,
+    
+      overview: {
+        content: `[ProtectSUS](https://www.protectsus.tech/) is a code security auditor that finds vulnerabilities and generates fixes. Most security tools bury developers in false positives, but we built something that cut through the noise with context-aware analysis and seamless GitHub integration.
+
+I was responsible for the entire frontend architecture, building an application that balances sophisticated backend logic with an intuitive user experience. Beyond the core scanning workflow, I included an admin page and supporting infrastructure to signal scalability.
+
+The design uses a trust driven gradient to convey technical credibility and innovation. Every layout was built to be responsive across mobile and desktop, and defensive against last minute feature changes.`,
+        images: [
+          {
+            src: "screensus.webp",
+            caption: "ProtectSUS web interface featuring code scanning and vulnerability highlighting, and GitHub App Integration"
+          }
+        ]
+      },
+    
+      problem: {
+        content: `
+Security tools today fail developers in these critical ways:
+* Traditional scanners flag syntax patterns without understanding logic, generating hundreds of false positives that get ignored
+* Existing tools don't explain *why* something is vulnerable or how to fix it effectively
+* Security checks require developers to leave their GitHub workflow and use external tools
+
+The real cost of poor security tooling is huge, breaches average millions in damages, often traceable to human error that better tooling could catch. We needed a system that works like a trusted senior engineer: 
+
+### Challenges assumptions, explains the reasoning, offers solutions, and integrates into existing workflows.`
+      },      
+    
+      development: {
+        content: `
+I led frontend development using **Next.js and TypeScript**, handling everything from design decisions to responsive implementation. The challenge wasn't just building features, but rather building components that could flex around uncertain backend outputs and build credibility.
+
+### My contributions included:
+* Implemented secure GitHub OAuth via NextAuth.js for user login and repository access
+* Designed and built a comprehensive admin dashboard to validate stack functionality, usage analytics and performance metrics
+* Built the landing page and flow to code scanner UI with syntax highlighting and vulnerability visualisation
+* Implemented responsive darkmode design for desktop and mobile devices using Tailwind CSS
+
+The frontend communicates with Python-based backend AI agents (OpenAI, Claude, Gemini) that work in parallel, where one searches for general bugs, another audits dependencies, a third synthesizes their debate. MongoDB serves as both a results store and RAG system, letting AI agents query historical vulnerability patterns to improve recommendations over time.
+
+Explore the [full open source codebase on GitHub!](https://github.com/pujara-narayana/protectSUS)`,
+        
+        images: [
+          {
+            src: "adminsus.webp",
+            caption: "Comprehensive frontend admin dashboard"
+          }
+        ]
+      },
+    
+      outcome: {
+        content: `ProtectSUS won **Best Use of MongoDB**, but the real win was building something that felt legitimate. We didn't cut corners to save 48 hours, including a professional landing page and shipping with polish sent the message that security tooling deserves to be taken seriously.
+
+### Key accomplishments:    
+1. Built a production quality frontend with attention to responsive design, color psychology, and user-centered interactions
+2. Engineered components to handle variable length AI outputs and adapt to last minute feature changes without UI breaking
+3. Included supporting infrastructure and multi-page layout that signaled scalability beyond a hackathon sprint
+4. Developers can also choose to never leave GitHub: scanning, feedback, and PR creation happen in the tool they already use
+
+The project demonstrated that thoughtful frontend design and robust implementation can take a complex system and make it feel intuitive and trustworthy.
+
+View the [submission on DevPost](https://devpost.com/software/protetsus), check out the [demo video](https://youtu.be/Obq2vTh7gec?si=Erm17X7fRPZMgqlp), or explore the [live application](https://www.protectsus.tech/).`
+      }
+    }
+    
+  },
+  { 
     title: "Tech Investments Analysis", 
     category: ["Data", "Development"], 
     image: "cxc.webp", 
@@ -89,6 +178,15 @@ We learned how to distill complex data into a [comprehensive report](https://doc
     
   },
   { 
+    title: "BloomWatch", 
+    category: ["Data, Design"], 
+    image: "bloomwatch.webp",
+    desc: "Using satellite data to predict wildflower blooms. NASA Space Apps 2025 global nominee.",
+    priority: false,
+    link: "https://www.spaceappschallenge.org/2025/find-a-team/mgmu/?tab=project",
+    tags: ["Python", "MODIS Data", "Predictive Modelling", "Data Visualisation"],
+  },
+  { 
     title: "Modelling Cancer on a Chip Systems", 
     category: ["Data"], 
     image: "cancer.webp",
@@ -97,15 +195,15 @@ We learned how to distill complex data into a [comprehensive report](https://doc
     link: "https://drive.google.com/file/d/1DG7go2jheZ0MGaO-mX_jS8KRhXHsdW-J/view?usp=drive_link",
     tags: ["Research", "COSMOL", "Mathematical Modelling"]
   },
-  { 
-    title: "Subletting in California", 
-    category: "Data", 
-    image: "sublet.webp",
-    desc: "Advising real estate stakeholders on the housing trends in California through exploratory analysis.",
-    priority: false,
-    link: "https://github.com/Gniminion/rchive/blob/main/Datafest%202025/DataFest%202025.pdf",
-    tags: ["R", "Data Visualisation", "Market Research"]
-  },
+  // { 
+  //   title: "Subletting in California", 
+  //   category: "Data", 
+  //   image: "sublet.webp",
+  //   desc: "Advising real estate stakeholders on the housing trends in California through exploratory analysis.",
+  //   priority: false,
+  //   link: "https://github.com/Gniminion/rchive/blob/main/Datafest%202025/DataFest%202025.pdf",
+  //   tags: ["R", "Data Visualisation", "Market Research"]
+  // },
   { 
     title: "Learn More Video Series", 
     category: "Design", 

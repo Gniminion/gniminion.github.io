@@ -13,6 +13,12 @@ export const PROFILE_IMAGE = {
   
 export const EXPERIENCES = [
     {
+      logo: "nflogo.webp",
+      institution: "NeuroFlex · 2026",
+      role: "Frontend and Data Visualisation Developer",
+      description: "Surfacing data insights through dashboard workflows and optimising web  experiences.",
+    },
+    {
       logo: "mikomiko.webp",
       institution: "Mikomiko SG · 2025",
       role: "UX/UI Designer and Product Management",
@@ -52,7 +58,7 @@ export const SKILLS = [
     { logo: faRProject, name: "R", description: "Data analysis" },
     { logo: faDatabase, name: "SQL", description: "Data analysis" },
     { logo: faPython, name: "Pandas · Python", description: "Data analysis" },
-    { logo: faReact, name: "React · JS", description: "Frontend dev" },
+    { logo: faReact, name: "React · JS · TS", description: "Frontend dev" },
     { logo: faCss3Alt, name: "Tailwind · CSS", description: "Frontend dev" },
     { logo: faFigma, name: "Figma", description: "UI design" },
     { logo: faPenNib, name: "Adobe Suite", description: "Graphic design" },
