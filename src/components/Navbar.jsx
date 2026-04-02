@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faHome, faLayerGroup, faPaperPlane, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faLayerGroup, faPaperPlane, faBars, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { SOCIAL_LINKS, RESUME_LINKS } from "../data/about";
 
 const MOBILE_BREAKPOINT = 600;
 const OBSERVER_THRESHOLD = 0;
-
-const SOCIAL_LINKS = {
-  linkedin: "https://www.linkedin.com/in/mu-mingming-zhang/",
-  github: "https://github.com/Gniminion",
-  resume: "https://drive.google.com/file/d/1DsYicfkFPkmvNDjExvnbvs1KwPESKi0z/view?usp=sharing"
-};
 
 const NAVIGATION_ITEMS = [
   { id: "home", icon: faHome, label: "About" },
@@ -22,6 +17,7 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
   const [activeSection, setActiveSection] = useState("");
   const [isOpen, setIsOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [showResumeDropdown, setShowResumeDropdown] = useState(false);
 
   const sectionRefs = {
     home: homeRef,
@@ -104,11 +100,35 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
           Product Designer <br />
           Web Developer
         </h1>
-        <a href={SOCIAL_LINKS.resume} target="_blank" rel="noopener noreferrer" >
-          <button className="px-2 py-1 border-2 border-primary text-sm text-primary rounded cursor-pointer mt-4 mb-8">
+        <div className="relative mt-4 mb-8">
+          <button 
+            className="px-4 py-2 border border-primary text-base text-primary rounded cursor-pointer flex items-center gap-2 font-medium"
+            onClick={() => setShowResumeDropdown(!showResumeDropdown)}
+          >
             Resume
+            <FontAwesomeIcon icon={faChevronDown} className={`text-xs transition-transform ${showResumeDropdown ? "rotate-180" : ""}`} />
           </button>
-        </a>
+          
+          {showResumeDropdown && (
+            <div className="absolute top-full left-0 mt-2 bg-dark rounded-md shadow-lg z-30 w-40 flex flex-col gap-1 p-1 border border-dark3">
+              <a href={RESUME_LINKS.design} target="_blank" rel="noopener noreferrer" className="block w-full">
+                <button className="w-full text-left px-4 py-2 text-base rounded-md bg-dark text-gray cursor-pointer hover:text-white transition">
+                  Design
+                </button>
+              </a>
+              <a href={RESUME_LINKS.data} target="_blank" rel="noopener noreferrer" className="block w-full">
+                <button className="w-full text-left px-4 py-2 text-base rounded-md bg-dark text-gray cursor-pointer hover:text-white transition">
+                  Data
+                </button>
+              </a>
+              <a href={RESUME_LINKS.development} target="_blank" rel="noopener noreferrer" className="block w-full">
+                <button className="w-full text-left px-4 py-2 text-base rounded-md bg-dark text-gray cursor-pointer hover:text-white transition">
+                  Development
+                </button>
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     );
   };

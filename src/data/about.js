@@ -1,6 +1,17 @@
 import { faPython, faReact, faRProject, faGitAlt, faFigma, faCss3Alt } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase, faPenNib } from "@fortawesome/free-solid-svg-icons";
 
+export const SOCIAL_LINKS = {
+  linkedin: "https://www.linkedin.com/in/mu-mingming-zhang/",
+  github: "https://github.com/Gniminion"
+};
+
+export const RESUME_LINKS = {
+  design: "https://drive.google.com/file/d/1gEpBPREDA1-45ev4s0xq_p_G-AL14o7E/view?usp=sharing",
+  data: "https://drive.google.com/file/d/1ADIf70muNJ8-3cfBq9fl_phIe-qyPsNJ/view?usp=sharing",
+  development: "https://drive.google.com/file/d/1WlBkeJLJegctwOMq939ofD5V0Y3ma_qc/view?usp=sharing"
+};
+
 export const PROFILE_IMAGE = {
     src: "me.webp",
     alt: "Photo of Mu Zhang",

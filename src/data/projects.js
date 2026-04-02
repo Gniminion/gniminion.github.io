@@ -179,7 +179,7 @@ We learned how to distill complex data into a [comprehensive report](https://doc
   },
   { 
     title: "BloomWatch", 
-    category: ["Data, Design"], 
+    category: ["Design", "Data"], 
     image: "bloomwatch.webp",
     desc: "Using satellite data to predict wildflower blooms. NASA Space Apps 2025 global nominee.",
     priority: false,
@@ -206,7 +206,7 @@ We learned how to distill complex data into a [comprehensive report](https://doc
   // },
   { 
     title: "Learn More Video Series", 
-    category: "Design", 
+    category: ["Design"], 
     image: "learnmore.webp",
     desc: "Storyboarding, designing, and editing videos to help students approach learning effectively.",
     priority: false,
